@@ -11,7 +11,7 @@ export const useFetch = (url) => {
     try {
       setLoading(true);
       const res = await fetch(url);
-      const json = res.json();
+      const json = await res.json();
 
       setData(json);
       setLoading(false);
